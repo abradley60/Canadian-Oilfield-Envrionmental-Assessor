@@ -434,8 +434,8 @@ def single_facility_OPGEE(well_data, well_data_headings, SK_facility_data, OPGEE
 
 
 		well_GOR = OPGEE_data[well][OPGEE_data['headings'].index('Gas-to-oil ratio (GOR)')]
-		OPGEE_data[well][OPGEE_data['headings'].index('Facility name')] = facility 
-		OPGEE_data[well][OPGEE_data['headings'].index('Facility type')] = fac_type 
+		OPGEE_data[well][OPGEE_data['headings'].index('Facility name')] = str(facility) 
+		OPGEE_data[well][OPGEE_data['headings'].index('Facility type')] = str(fac_type) 
 
 					
 		if (fuel_gas + flare_gas + vent_gas) > 1.05*(prod_gas + rec_gas):
