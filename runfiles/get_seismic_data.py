@@ -8,12 +8,13 @@ import pylab
 import datetime
 from mpl_toolkits.basemap import Basemap
 import re
-import time 
+import time
+from map_to_drive import map_to_drive #path to Project Data folder 
 
 def get_NRC_seismic_data():
 
 	count = 0;
-	seismic_file = "C:/Users/alexander.bradley/Desktop/Project Data/NRC (EarthQuakes)/EarthQuakes (2008-2018).csv"
+	seismic_file = map_to_drive() +"/Project Data/NRC (EarthQuakes)/EarthQuakes (2008-2018).csv"
 	
 	timer = time.time()
 	print('\n========Importing Seismic Data========')
@@ -53,7 +54,7 @@ def get_NRC_seismic_data():
 
 def get_CISC_seismic_data():
 
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/Canadian_Induced_Seismicity_Collaboration/AlbertaCompCat2018-09.txt"
+	file_location = map_to_drive() +"/Project Data/Canadian_Induced_Seismicity_Collaboration/AlbertaCompCat2018-09.txt"
 
 	print('\n========Importing Seismic Data========')
 	print('Getting Seismic Data from the Canadian Induced Seismicity Collaboration\n')
@@ -93,7 +94,7 @@ def get_CISC_seismic_data():
 def get_updated_NRC_seismic_data():
 
 	count = 0;
-	seismic_file = "C:/Users/alexander.bradley/Desktop/Project Data/NRC (EarthQuakes)/EarthQuakes_new (2008-2018).csv"
+	seismic_file = map_to_drive() +"/Project Data/NRC (EarthQuakes)/EarthQuakes_new (2008-2018).csv"
 	
 	timer = time.time()
 	print('\n========Importing Seismic Data========')

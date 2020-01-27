@@ -8,11 +8,12 @@ import pylab
 import datetime
 import re
 import time
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_BC_water_data():
 
 	count = 0;
-	BC_hydraulic_fracture = "C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/hydraulic_fracture/hydraulic_fracture.csv"
+	BC_hydraulic_fracture = map_to_drive() + "/Project Data/BCOGC/hydraulic_fracture/hydraulic_fracture.csv"
 	water_data_headings = []
 
 	timer = time.time()

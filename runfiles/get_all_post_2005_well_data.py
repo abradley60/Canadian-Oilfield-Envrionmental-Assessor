@@ -5,7 +5,7 @@ import collections
 import time
 from datetime import datetime
 import re
-
+from map_to_drive import map_to_drive #path to Project Data folder
 
 
 
@@ -19,8 +19,8 @@ def get_all_post_2005_well_data():
 
 	wells_list = []
 	array = []
-	#file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/weyburn-estevan.csv"
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
+	#file_location = map_to_drive() + "/Project Data/geoSCOUT_data/weyburn-estevan.csv"
+	file_location = map_to_drive() + "/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
 
 
 	#Searching for wells
@@ -66,7 +66,7 @@ def get_tight_oil_wells():
 	well_data_headings = []
 
 	wells_list = []
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
+	file_location = map_to_drive() + "/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
 
 	#Searching for wells
 	formation = str(raw_input('Enter the tight oil formation of interest or type all;   '))

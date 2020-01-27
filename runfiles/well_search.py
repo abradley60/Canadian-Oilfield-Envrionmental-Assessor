@@ -14,6 +14,7 @@ import time
 from datetime import datetime
 import re
 import webbrowser
+from map_to_drive import map_to_drive #path to Project Data folder
 
 
 def introduction():
@@ -47,9 +48,9 @@ def well_search():
 
 	count = 0;
 	wells_list = []
-	#file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/Canadian_LNG_well_data.csv"
+	#file_location = map_to_drive() + "Project Data/geoSCOUT_data/Canadian_LNG_well_data.csv"
 	#The main one
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
+	file_location = map_to_drive() + "Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
 
 
 	with open(file_location) as f:

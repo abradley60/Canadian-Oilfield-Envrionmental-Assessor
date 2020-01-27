@@ -13,6 +13,7 @@ def python_to_OPGEE(OPGEE_data):
 	import openpyxl
 	from string import ascii_uppercase
 	import re
+	from map_to_drive import map_to_drive #path to Project Data folder
 
 	#import_file_name = "OPGEE_v2.0_Original.xlsm"
 	#import_file_name = "OPGEE_3.0a_BETA_edit.xlsm"
@@ -21,7 +22,7 @@ def python_to_OPGEE(OPGEE_data):
 
 	for file in import_export_files:
 
-		path = "C:/Users/alexander.bradley/Google Drive/University of Calgary_/Masters Research/Western Canadian Tight Oil/Model/OPGEE/" + file
+		path = map_to_drive() + "/OPGEE/" + file
 		
 		#these can occur if a well is drilled in 2016 and produces in 2017
 		#if we are only assessing the period to the end of 2016
@@ -90,13 +91,13 @@ def python_to_OPGEE(OPGEE_data):
 		remove_characters = ['/', ' ']
 		project_name = re.sub("|".join(remove_characters), "", project_name) 
 		
-		opgee_version = "OPGEE_v2.0_TO_edit"
+		opgee_version = "OPGEE_v2.0_edit_"
 		#opgee_version = "OPGEE_3.0a_BETA_"
 		#opgee_version = file[:-5] + '_'
 
 		export_file_name =  opgee_version + project_name + ".xlsm"
 
-		file_save_location = "C:/Users/alexander.bradley/Google Drive/University of Calgary_/Masters Research/Western Canadian Tight Oil/Model/OPGEE/tight_oil_final/" + export_file_name
+		file_save_location = map_to_drive() +"/OPGEE/COEA_OPGEE/" + export_file_name
 		wb.save(file_save_location)
 
 		print('Successfully Exported!\n')

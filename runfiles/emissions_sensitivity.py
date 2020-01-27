@@ -6,13 +6,14 @@ import csv
 import collections
 from return_statistics import remove_outliers
 from datetime import datetime
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_additional_well_data():
 	#get additionall data for each well - etc age, depth....
 
 	print('\nGetting Additional Data\n')
 
-	Well_data_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 well data (June 19) v2.csv"
+	Well_data_location = map_to_drive() +"/Project Data/geoSCOUT_data/post 2005 well data (June 19) v2.csv"
 
 	emissions_sensitivity_location = "C:/Users/alexander.bradley/Google Drive/University of Calgary_/Masters Research/Western Canadian Tight Oil/COEA Results/well_level_results.csv"
 

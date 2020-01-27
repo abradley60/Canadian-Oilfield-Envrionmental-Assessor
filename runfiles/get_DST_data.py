@@ -9,11 +9,12 @@ import datetime
 from get_well_data import get_formation_well_data
 import re
 import time
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_DST_data():
 
 	count = 0;
-	DST_csv = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 DST data.csv"
+	DST_csv = map_to_drive() +"/Project Data/geoSCOUT_data/post 2005 DST data.csv"
 
 	timer = time.time()
 

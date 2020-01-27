@@ -6,6 +6,7 @@ import time
 from datetime import datetime
 import re
 from get_size import get_size
+from map_to_drive import map_to_drive #path to Project Data folder
 
 
 def get_well_data_from_WA(WA_array):
@@ -16,7 +17,7 @@ def get_well_data_from_WA(WA_array):
 	well_data_headings = []
 
 	wells_list = []
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 well data.csv"
+	file_location = map_to_drive() + "Project Data/geoSCOUT_data/post 2005 well data.csv"
 
 	#Searching for wells
 	print('\nSearching For Wells...\n')

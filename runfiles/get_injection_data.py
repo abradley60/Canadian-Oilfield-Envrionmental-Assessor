@@ -11,7 +11,7 @@ from datetime import datetime
 import re
 from get_size import get_size
 import progressbar
-
+from map_to_drive import map_to_drive #path to Project Data folder
 	
 def get_injection_data(well_data):
 
@@ -30,7 +30,7 @@ def get_injection_data(well_data):
 	init = 0
 	switch = 0
 	wells_list = []
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 injection (25-02-19).csv"
+	file_location = map_to_drive() +"/Project Data/geoSCOUT_data/post 2005 injection (25-02-19).csv"
 	remove_characters = ['/', '-', ' ']
 
 	with open(file_location) as f:

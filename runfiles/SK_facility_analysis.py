@@ -5,6 +5,7 @@ import csv
 import re
 import numpy as np
 from datetime import datetime, timedelta
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_SK_facility_links(date_array):
 
@@ -18,7 +19,7 @@ def get_SK_facility_links(date_array):
 	facility_to_well = collections.OrderedDict()
 	facility_connection_dates = collections.OrderedDict() #facility_connection_dates[facility + ' to ' + well] = [month1, month2, month3..]
 
-	SK_FFV_file =  "C:/Users/alexander.bradley/Desktop/Project Data/SK_gov/SK Well to BT Links.csv"
+	SK_FFV_file =  map_to_drive() + "Project Data/SK_gov/SK Well to BT Links.csv"
 
 	with open(SK_FFV_file) as f:
 		reader = csv.reader(f)
@@ -157,7 +158,7 @@ def get_SK_facility_data(connected_facilities, date_array):
 
 		print('\nGetting SK facility Data for ' + str(year))
 
-		SK_data_path = "C:/Users/alexander.bradley/Desktop/Project Data/SK_gov/SK FFV (Nov 22)/" + year + ".csv"
+		SK_data_path = map_to_drive() + "Project Data/SK_gov/SK FFV (Nov 22)/" + year + ".csv"
 
 		included_facility_type = []
 		excluded_facility_type = []

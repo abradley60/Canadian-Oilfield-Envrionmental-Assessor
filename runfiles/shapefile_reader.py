@@ -15,6 +15,7 @@ import matplotlib as mpl
 from shapely import wkt
 from shapely.ops import linemerge, unary_union, polygonize	
 from matplotlib.legend import Legend
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def plot_infrastructure():
 
@@ -317,20 +318,20 @@ def formation_shapefile_plotter():
 
 	shapefile_locations = collections.OrderedDict()
 
-	#shapefile_locations['Slave Point'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
-	#shapefile_locations['Beaverhill'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
-	shapefile_locations['AB_pools'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
-	#shapefile_locations['Saskatchewan_pools'] = "C:/Users/alexander.bradley/Desktop/Project Data/SK_gov/Sask_pool_shapefiles/PoolLand.shp"
-	#shapefile_locations['BC_pools'] = "C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/OG_OIL_AND_GAS_FIELDS_SP/OG_FIELDS_polygon.shp"
-	#shapefile_locations['Montney'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Montney Shapefile/Montney.shp" 
-	#shapefile_locations['Duvernay']= "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Duvernay_Petroleum_System/shalegas_fms_py_ll.shp"
-	shapefile_locations['BC_regional_fields'] = 'C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/OG_REGIONAL_FIELDS_SP/OG_REG_FLD_polygon.shp'
-	#shapefile_locations['US_CAN_fields'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/tight_fields/tight_fields_JSON.txt-polygon.shp"
-	#shapefile_locations['Montney'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Montney_Isopach_litho/fg1624_py_ll.shp"
-	#shapefile_locations['Beaverhill'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Beaverhill_Lake_Isopach/fg1103_py_ll.shp" 
-	#shapefile_locations['Charlie Lake'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Charlie_Lake_Isopach_and_Lithofacies/fg1631_py_ll.shp"
-	#shapefile_locations['Belly River'] = "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Belly_River_Isopach/fg2416_py_ll.shp"
-	#shapefile_locations['Pekisko']= "C:/Users/alexander.bradley/Desktop/Project Data/AER/Field_shapefiles/Rundle_(Pekisko)_Isopach_and_Lithofacies/fg1434_py_ll.shp"
+	#shapefile_locations['Slave Point'] = map_to_drive() + "Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
+	#shapefile_locations['Beaverhill'] = map_to_drive() + "Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
+	shapefile_locations['AB_pools'] = map_to_drive() + "Project Data/AER/Field_shapefiles/AER_Order_System_SHP/Field_region.shp"
+	#shapefile_locations['Saskatchewan_pools'] = map_to_drive() + "Project Data/SK_gov/Sask_pool_shapefiles/PoolLand.shp"
+	#shapefile_locations['BC_pools'] = map_to_drive() + "Project Data/BCOGC/OG_OIL_AND_GAS_FIELDS_SP/OG_FIELDS_polygon.shp"
+	#shapefile_locations['Montney'] = map_to_drive() + "Project Data/AER/Field_shapefiles/Montney Shapefile/Montney.shp" 
+	#shapefile_locations['Duvernay']= map_to_drive() + "Project Data/AER/Field_shapefiles/Duvernay_Petroleum_System/shalegas_fms_py_ll.shp"
+	shapefile_locations['BC_regional_fields'] = 'C:/Users/alexander.bradley/Desktop/"Project Data/BCOGC/OG_REGIONAL_FIELDS_SP/OG_REG_FLD_polygon.shp'
+	#shapefile_locations['US_CAN_fields'] = map_to_drive() + "Project Data/AER/Field_shapefiles/tight_fields/tight_fields_JSON.txt-polygon.shp"
+	#shapefile_locations['Montney'] = map_to_drive() + "Project Data/AER/Field_shapefiles/Montney_Isopach_litho/fg1624_py_ll.shp"
+	#shapefile_locations['Beaverhill'] = map_to_drive() + "Project Data/AER/Field_shapefiles/Beaverhill_Lake_Isopach/fg1103_py_ll.shp" 
+	#shapefile_locations['Charlie Lake'] = map_to_drive() + "Project Data/AER/Field_shapefiles/Charlie_Lake_Isopach_and_Lithofacies/fg1631_py_ll.shp"
+	#shapefile_locations['Belly River'] = map_to_drive() + "Project Data/AER/Field_shapefiles/Belly_River_Isopach/fg2416_py_ll.shp"
+	#shapefile_locations['Pekisko']= map_to_drive() + "Project Data/AER/Field_shapefiles/Rundle_(Pekisko)_Isopach_and_Lithofacies/fg1434_py_ll.shp"
 
 
 	#BEAVERHILL - shapes of interest (count) = [57 through 63]

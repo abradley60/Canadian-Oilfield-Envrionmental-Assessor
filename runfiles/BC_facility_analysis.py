@@ -12,12 +12,13 @@ from shapely.geometry.polygon import Polygon
 import re
 from OPGEE_input_sensitivity import OPGEE_input_sensitivity
 import datetime
+from map_to_drive import map_to_drive #path to Project Data folder
 
 
 def get_BC_facility_links():
 
 	print('\nGetting BC Facility to Well Connections')
-	facility_links_location = "C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/BC_facility_linkage.csv"
+	facility_links_location = map_to_drive() + "/Project Data/BCOGC/BC_facility_linkage.csv"
 	BC_facility_links = collections.OrderedDict()
 	
 
@@ -167,7 +168,7 @@ def get_BC_facility_data(date_array, BC_facility_list):
 
 		print('Getting BC facility Data for ' + str(year))
 
-		BC_facility_data_path = "C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/facility_volumetrics/" + year + ".csv"
+		BC_facility_data_path = map_to_drive() + "/Project Data/BCOGC/facility_volumetrics/" + year + ".csv"
 
 		switch = 0
 
@@ -395,7 +396,7 @@ def get_BC_facility_index():
 
 	#function acessesthe facindex file and gets facility data - eg type
 
-	facility_index_location = "C:/Users/alexander.bradley/Desktop/Project Data/BCOGC/facindex.csv"
+	facility_index_location = map_to_drive() + "/Project Data/BCOGC/facindex.csv"
 	BC_facility_index = collections.OrderedDict()
 
 	#A switch for when we want to start storing csv data

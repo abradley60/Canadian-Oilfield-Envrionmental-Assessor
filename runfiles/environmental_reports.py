@@ -2,7 +2,7 @@
 
 import collections
 import csv
-
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def environmental_reports(well_data_headings, well_data):
 
@@ -13,7 +13,7 @@ def environmental_reports(well_data_headings, well_data):
 	facility_environmental_reports = collections.OrderedDict()
 	selected_environmental_reports = collections.OrderedDict()
 
-	file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 environmental_reports.csv"
+	file_location = map_to_drive() + "/Project Data/geoSCOUT_data/post 2005 environmental_reports.csv"
 
 	with open(file_location) as f:
 		reader = csv.reader(f)

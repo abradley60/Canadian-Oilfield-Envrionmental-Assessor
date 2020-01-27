@@ -11,10 +11,11 @@ import re
 from distance_between_coordinates import distance_between_coordinates
 from plot_basemap import plot_basemap
 import time 
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_AB_water_source_data():
 	
-	AB_HF_WaterSourceData = "C:/Users/alexander.bradley/Desktop/Project Data/AER/HF_WaterSourceData.csv"
+	AB_HF_WaterSourceData = map_to_drive() +"/Project Data/AER/HF_WaterSourceData.csv"
 
 	timer = time.time()
 	print('\n\n========Importing Alberta Water Source Data========')
@@ -59,7 +60,7 @@ def get_AB_water_source_data():
 
 def get_AB_water_use_data():
 
-	AB_HF_WaterUseData = "C:/Users/alexander.bradley/Desktop/Project Data/AER/HF_WaterUseData.csv"
+	AB_HF_WaterUseData = map_to_drive() +"/Project Data/AER/HF_WaterUseData.csv"
 
 	timer = time.time()
 	print('\n\nImporting Alberta Water Use Data')

@@ -12,6 +12,7 @@ from plot_basemap import plot_basemap
 from write_to_excel import write_to_excel
 import time
 from get_all_post_2005_well_data import get_tight_oil_wells
+from map_to_drive import map_to_drive #path to Project Data folder
 
 def get_all_monthly_facility_data(year_month, from_to_facility,facility_connection_dates):
 
@@ -23,7 +24,7 @@ def get_all_monthly_facility_data(year_month, from_to_facility,facility_connecti
 
 	all_facility_data = collections.OrderedDict() #Getting data from the csv referenced to facilityID
 
-	Battery_FFV_folder = "C:/Users/alexander.bradley/Desktop/Project Data/AER/facility_volumetrics/"
+	Battery_FFV_folder = map_to_drive() + "/Project Data/AER/facility_volumetrics/"
 	Battery_FFV_File = "Vol_" + year_month + ".csv"
 
 	Battery_FFV = Battery_FFV_folder + Battery_FFV_File + "/" + Battery_FFV_File
@@ -474,7 +475,7 @@ def geoscout_facility_data(selected_facility_data):
 
 	geoscout_facility_data = collections.OrderedDict() #Getting data from the csv referenced to facilityID
 	
-	facility_data_file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/AB_all_facilities.csv"
+	facility_data_file_location = map_to_drive() + "/Project Data/geoSCOUT_data/AB_all_facilities.csv"
 	
 	with open(facility_data_file_location) as f:
 		reader = csv.reader(f)

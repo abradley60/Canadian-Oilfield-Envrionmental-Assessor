@@ -10,6 +10,7 @@ import datetime
 import re
 import time
 from return_statistics import histogram, return_statistics, boxplot
+from map_to_drive import map_to_drive #path to Project Data folder
 
 '''
 def sum_average_min_max(well_data, well_data_headings, fluid_data, fluid_data_headings, data_type, sum_avg_min_max):
@@ -30,11 +31,11 @@ def get_fluid_data(fluid_type,well_data,):
 
 	#get appropriate file for 
 	if fluid_type.upper() == 'GAS':
-		file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 gas_analysis.csv"
+		file_location = map_to_drive() + "/Project Data/geoSCOUT_data/post 2005 gas_analysis.csv"
 	#if fluid_type.upper() == 'WATER':
 	#	file = formation + '_' + fluid_type + '_analysis.csv' 
 	if fluid_type.upper() == 'OIL':
-		file_location = "C:/Users/alexander.bradley/Desktop/Project Data/geoSCOUT_data/post 2005 oil_analysis.csv"
+		file_location = map_to_drive() + "/Project Data/geoSCOUT_data/post 2005 oil_analysis.csv"
 
 	count = 0;
 	fluid_data = collections.OrderedDict() #Getting data from the csv referenced to well

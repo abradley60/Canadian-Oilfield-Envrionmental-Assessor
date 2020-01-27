@@ -11,7 +11,6 @@ import datetime
 import re
 from runfiles.get_AB_water_data import get_AB_water_source_data, AB_water_source_plotter
 from runfiles.get_BC_water_data import get_BC_water_data
-from runfiles.get_production_data import get_production_data
 from runfiles.general_well_data_analysis import general_well_data_analysis, OPGEE_well_data
 from runfiles.formation_fluid_functions import get_fluid_data, oil_analysis_summary, OPGEE_well_gas_data, OPGEE_well_oil_data, gas_analysis_summary
 from runfiles.AB_water_analysis import AB_water_source_analysis
