@@ -16,13 +16,13 @@ def python_to_OPGEE(OPGEE_data):
 	from map_to_drive import map_to_drive #path to Project Data folder
 
 	#import_file_name = "OPGEE_v2.0_Original.xlsm"
-	#import_file_name = "OPGEE_3.0a_BETA_edit.xlsm"
+	#import_file_name = ""OPGEE_3.0a_BETA.xlsm""
 	import_export_files = ["OPGEE_v2.0_tight_oil_edit.xlsm"]
 	#,"OPGEE_3.0a_BETA_edit.xlsm"
 
 	for file in import_export_files:
 
-		path = map_to_drive() + "/OPGEE/" + file
+		path = map_to_drive() + "Project Data/OPGEE/" + file
 		
 		#these can occur if a well is drilled in 2016 and produces in 2017
 		#if we are only assessing the period to the end of 2016
@@ -91,13 +91,13 @@ def python_to_OPGEE(OPGEE_data):
 		remove_characters = ['/', ' ']
 		project_name = re.sub("|".join(remove_characters), "", project_name) 
 		
-		opgee_version = "OPGEE_v2.0_edit_"
+		opgee_version = file[0:11]
 		#opgee_version = "OPGEE_3.0a_BETA_"
 		#opgee_version = file[:-5] + '_'
 
 		export_file_name =  opgee_version + project_name + ".xlsm"
 
-		file_save_location = map_to_drive() +"/OPGEE/COEA_OPGEE/" + export_file_name
+		file_save_location = map_to_drive() +"Project Data/OPGEE/COEA - OPGEE/" + export_file_name
 		wb.save(file_save_location)
 
 		print('Successfully Exported!\n')

@@ -449,7 +449,6 @@ def production_analysis(well_data, well_data_headings, production_data, producti
 
 if __name__ == '__main__':
 
-	from get_well_data import get_formation_well_data
 	from OPGEE_defaults import OPGEE_defaults
 	from search_production_data import search_production_data
 	import collections

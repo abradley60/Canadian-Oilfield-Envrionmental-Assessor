@@ -50,7 +50,7 @@ def well_search():
 	wells_list = []
 	#file_location = map_to_drive() + "Project Data/geoSCOUT_data/Canadian_LNG_well_data.csv"
 	#The main one
-	file_location = map_to_drive() + "Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
+	file_location = map_to_drive() + "Project Data/geoSCOUT_data/post 2005 well_data.csv"
 
 
 	with open(file_location) as f:
@@ -134,8 +134,8 @@ def well_search():
 
 			if row[0] != 'Sort Format Well ID (Long)':
 				
-				date = row[well_data_headings.index('Date Drlg Completed')]
-				#date = row[well_data_headings.index('Date Well Spudded')]
+				#date = row[well_data_headings.index('Date Drlg Completed')]
+				date = row[well_data_headings.index('Date Well Spudded')]
 				horizontal = row[well_data_headings.index('Horizontal Hole (T/F)')]
 				wellid = row[well_data_headings.index('CPA Well ID')]
 				formation = row[well_data_headings.index('Prod./Inject. Frmtn')]

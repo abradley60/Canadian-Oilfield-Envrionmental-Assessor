@@ -758,7 +758,6 @@ def BC_facility_shapefile_analyis(well_data, well_data_headings, date_array, sha
 
 if __name__ == '__main__':
 
-	from get_well_data import get_formation_well_data
 	from well_search import well_search
 	from dates_array import dates_array
 	from get_all_post_2005_well_data import get_all_post_2005_well_data,get_tight_oil_wells

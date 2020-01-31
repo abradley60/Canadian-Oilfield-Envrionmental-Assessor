@@ -184,7 +184,7 @@ if ask_facility_data.upper() == 'Y':
 	#get data for facilities connected to facilities
 
 	print('\n===========================\n Facility Data Selection\n==========================\n')
-	print('Monthly Facility Data is Available from 2014-01 to 2017-12')
+	print('Monthly Facility Data is Available from 2014-01 to 2019-12')
 	print('Enter The Date Range For Assessment (5-10 seconds per month)')
 	start_date = str(raw_input('Start Date (YYYY-MM):   '))
 	end_date = str(raw_input('End Date (YYYY-MM):   '))

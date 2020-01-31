@@ -6,7 +6,6 @@ import csv
 import collections
 import pylab
 import datetime
-from get_well_data import get_formation_well_data
 import re
 import time
 from get_BC_water_data import get_BC_water_data

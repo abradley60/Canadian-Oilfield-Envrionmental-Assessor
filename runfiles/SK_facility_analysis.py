@@ -543,7 +543,6 @@ if __name__ == '__main__':
 	from OPGEE_defaults import OPGEE_defaults
 	from general_well_data_analysis import OPGEE_well_data
 	from OPGEE_input_sensitivity import OPGEE_input_sensitivity
-	from get_montney_trial_well_data import get_formation_well_data
 	from get_all_post_2005_well_data import get_all_post_2005_well_data, get_tight_oil_wells
 
 	#well_data_headings, well_data, project_name = well_search()

@@ -9,14 +9,12 @@ from scipy import stats
 import time
 from datetime import datetime
 import re
-from get_size import get_size
-import progressbar
 from map_to_drive import map_to_drive #path to Project Data folder
 	
 def search_production_data(well_data):
 
 	print('\n==========================\n  PRODUCTION DATA SEARCH \n==========================\n')
-	print('The database was exported from geoSCOUT on December 2018')
+	print('The database was exported from geoSCOUT on December 2020')
 	print('Getting Production Data For Selected Wells')
 	print('\nData is Loading, May Take a Minute.....\n')
 

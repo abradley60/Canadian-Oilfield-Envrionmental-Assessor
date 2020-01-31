@@ -690,7 +690,6 @@ if __name__ == '__main__':
 
 	from well_search import well_search
 	from OPGEE_defaults import OPGEE_defaults
-	from get_montney_trial_well_data import get_formation_well_data
 	from general_well_data_analysis import OPGEE_well_data, general_well_data_analysis
 	from dates_array import dates_array
 	from OPGEE_input_sensitivity import OPGEE_input_sensitivity
