@@ -14,7 +14,7 @@ scipy
 pandas
 
 # Instructions
-**1) Python installation**
+**1) Python installation**   
 The COEA is best using the command prompt (Windows) or terminal (Mac) on your local machine
 Python v2.7 is required and should be installed as follows - https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation
 Following a successful implementation, you should be able to call python from your command prompt/terminal and see the following 
