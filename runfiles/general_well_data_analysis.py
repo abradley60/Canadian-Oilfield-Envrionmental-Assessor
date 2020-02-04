@@ -97,18 +97,22 @@ def general_well_data_analysis(header_data, well_data, OPGEE_data, field_name):
 		#well zonation count
 		zone_criteria = ['GOR = 0 or > 17800 ', '1780 < GOR =< 17800','267 < GOR =< 1780', 'GOR =< 267']
 		
-		GOR = float(well_data[well][GOR_index])
+		try:
+			GOR = float(well_data[well][GOR_index])
+		except:
+			GOR = 'NA'
 		#GOR = 1
 
 		if (GOR == 0 or GOR > 17800):
 			zone_wells['Dry Gas'] += 1
-		if (1780 < GOR <= 17800):
+		elif (1780 < GOR <= 17800):
 			zone_wells['Condensate'] += 1
-		if (267 < GOR <= 1780):
+		elif (267 < GOR <= 1780):
 			zone_wells['Volitile Oil'] += 1
-		if (0 < GOR <= 267):
+		elif (0 < GOR <= 267):
 			zone_wells['Black Oil'] += 1
-
+		else:
+			zone_wells['NA'] += 1
 		# Formation Depths
 		try:
 			well_depths.append(float(well_data[well][TVD_index]))

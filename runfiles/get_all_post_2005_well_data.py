@@ -20,7 +20,7 @@ def get_all_post_2005_well_data():
 	wells_list = []
 	array = []
 	#file_location = map_to_drive() + "/Project Data/geoSCOUT_data/weyburn-estevan.csv"
-	file_location = map_to_drive() + "/Project Data/geoSCOUT_data/Post 2005 Well Data.csv"
+	file_location = map_to_drive() + "Project Data/geoSCOUT_data/Post 2005 well_data.csv"
 
 
 	#Searching for wells

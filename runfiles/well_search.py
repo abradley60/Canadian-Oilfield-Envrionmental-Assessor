@@ -22,7 +22,7 @@ def introduction():
 	#explaination of module:
 	print('\n=========================\n WELL SELECTION MODULE \n=========================\n')
 	print('Begin by selecting the set of wells for assessment')
-	print('The database was exported from geoSCOUT on 25-Feb-2019')
+	print('The database was exported from geoSCOUT in Jan-2020')
 	print('Some of the most recent data may be missing through confidentiality. For example see;')
 	print('https://geologicsystems.wordpress.com/2011/03/28/when-data-is-released-on-confidential-wells/\n')
 	print('Current Available Search Criteria for Selecting Wells: \n')

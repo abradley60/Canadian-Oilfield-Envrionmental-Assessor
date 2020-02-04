@@ -37,7 +37,7 @@ from runfiles.DST_analysis import DST_analysis
 #from runfiles.shapefile_reader import formation_shapefile_plotter, plot_infrastructure
 from runfiles.get_injection_data import get_injection_data
 from runfiles.injection_analysis import injection_analysis, injection_dates
-from runfiles.get_all_post_2005_well_data import get_tight_oil_wells
+from runfiles.get_all_post_2005_well_data import get_tight_oil_wells, get_all_post_2005_well_data
 
 #text welcoming to module etc
 introduction()
@@ -54,6 +54,8 @@ print('\n\nData is Loading Please Wait...\n\n')
 #this is the set of wells that data will be collectd for in the remainder of the functions
 #well_data is stored in a dictionary {'Well UWI' : [well data]} - to know what is stored in the well_data file, print well_data_headings 
 well_data_headings, well_data, field_name = well_search() 
+#well_data_headings, well_data = get_all_post_2005_well_data()
+#field_name = "all"
 #well_data_headings, well_data, field_name = get_tight_oil_wells()
 print('\n\n====================  Data available For Wells  ====================\n')
 print(well_data_headings)
