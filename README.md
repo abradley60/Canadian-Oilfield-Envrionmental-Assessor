@@ -8,5 +8,7 @@ matplotlib
 basemap (https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation)  
 CSV 
 openpyxl   
-
+shapely  
+scipy  
+pandas
 
