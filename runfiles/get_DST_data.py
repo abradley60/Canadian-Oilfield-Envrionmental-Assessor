@@ -6,7 +6,6 @@ import csv
 import collections
 import pylab
 import datetime
-from get_well_data import get_formation_well_data
 import re
 import time
 from map_to_drive import map_to_drive #path to Project Data folder

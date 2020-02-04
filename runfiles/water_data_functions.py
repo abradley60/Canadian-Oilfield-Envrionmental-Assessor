@@ -72,7 +72,6 @@ def water_data_sum_average_min_max(water_data, water_data_headings, well_data, w
 if __name__ == '__main__':
 
 	from get_BC_water_data import get_BC_water_data
-	from get_well_data import get_formation_well_data
 	from well_search import well_search
 	from get_all_post_2005_well_data import get_all_post_2005_well_data
 

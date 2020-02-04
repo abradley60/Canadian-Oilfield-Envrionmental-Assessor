@@ -2,13 +2,13 @@ import os
 import csv
 import collections
 import numpy as np
-from plot_basemap import plot_basemap, montney_shape_plot
-from map_plotter import map_plotter
+#from plot_basemap import plot_basemap, montney_shape_plot
+#from map_plotter import map_plotter
 from well_plotter import get_well_coordinates
 import matplotlib.pyplot as plt
-import shapefile
-from shapely.geometry import Point
-from shapely.geometry.polygon import Polygon
+#import shapefile
+#from shapely.geometry import Point
+#from shapely.geometry.polygon import Polygon
 import re
 from OPGEE_input_sensitivity import OPGEE_input_sensitivity
 import datetime

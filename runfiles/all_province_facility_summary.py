@@ -96,7 +96,6 @@ if __name__ == '__main__':
 
 	from well_search import well_search
 	from OPGEE_defaults import OPGEE_defaults
-	from get_montney_trial_well_data import get_formation_well_data
 	from dates_array import dates_array
 	from general_well_data_analysis import OPGEE_well_data
 	from AB_facility_analysis_new import AB_facility_analysis

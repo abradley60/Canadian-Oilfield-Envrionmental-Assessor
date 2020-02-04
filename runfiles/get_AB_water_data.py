@@ -6,10 +6,10 @@ import csv
 import collections
 import pylab
 import datetime
-from mpl_toolkits.basemap import Basemap
+#from mpl_toolkits.basemap import Basemap
 import re
 from distance_between_coordinates import distance_between_coordinates
-from plot_basemap import plot_basemap
+#from plot_basemap import plot_basemap
 import time 
 from map_to_drive import map_to_drive #path to Project Data folder
 

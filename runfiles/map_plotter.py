@@ -1,6 +1,6 @@
 #map plotter
 
-from plot_basemap import plot_basemap
+#from plot_basemap import plot_basemap
 import matplotlib.pyplot as plt
 
 def map_plotter(map_,coordinates_array,color,markersize):

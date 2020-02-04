@@ -5,7 +5,6 @@ import collections
 import time
 from datetime import datetime
 import re
-from get_size import get_size
 from map_to_drive import map_to_drive #path to Project Data folder
 
 

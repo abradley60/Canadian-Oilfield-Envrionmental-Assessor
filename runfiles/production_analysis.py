@@ -11,7 +11,7 @@ from datetime import datetime
 def production_dates():
 
 	print('\nSelect the dates for which you would like to assess production')
-	print('The available data set contains monthly production data for wells between 01/01/2005 and mid-2018')
+	print('The available data set contains monthly production data for wells between Jan-2005 and Dec-2019')
 	print('For OPGEE field assessment, adjust start date to be first drill year\n')
 	start_date = str(raw_input('Enter the Start Date (YYYY-MM): '))
 	end_date = str(raw_input('Enter the End Date (YYYY-MM): '))

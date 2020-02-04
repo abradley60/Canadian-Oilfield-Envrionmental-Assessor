@@ -9,8 +9,6 @@ from scipy import stats
 import time
 from datetime import datetime
 import re
-from get_size import get_size
-import progressbar
 from map_to_drive import map_to_drive #path to Project Data folder
 	
 def get_injection_data(well_data):

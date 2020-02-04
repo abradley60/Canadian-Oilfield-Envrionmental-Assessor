@@ -244,7 +244,6 @@ def DST_analysis(well_data, well_data_headings, DST_data, DST_headings, OPGEE_da
 if __name__ == '__main__':
 	
 	from get_DST_data import get_DST_data
-	from get_well_data import get_formation_well_data
 	from OPGEE_defaults import OPGEE_defaults
 	from well_search import well_search
 	from general_well_data_analysis import OPGEE_well_data, general_well_data_analysis

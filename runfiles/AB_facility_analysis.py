@@ -8,8 +8,7 @@ import collections
 import pylab
 import datetime
 import re
-from plot_basemap import plot_basemap
-from write_to_excel import write_to_excel
+#from plot_basemap import plot_basemap
 import time
 from get_all_post_2005_well_data import get_tight_oil_wells
 from map_to_drive import map_to_drive #path to Project Data folder

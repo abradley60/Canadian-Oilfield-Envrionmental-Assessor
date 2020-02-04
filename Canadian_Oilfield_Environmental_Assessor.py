@@ -2,7 +2,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
-from mpl_toolkits.basemap import Basemap 
+#from mpl_toolkits.basemap import Basemap 
 import os
 import csv
 import collections
@@ -22,8 +22,8 @@ from runfiles.introduction import introduction
 from runfiles.well_search import well_search
 from runfiles.search_production_data import search_production_data
 from runfiles.python_to_OPGEE import python_to_OPGEE
-from runfiles.induced_seismicity import induced_seismic_assessment
-from runfiles.get_seismic_data import get_NRC_seismic_data
+#from runfiles.induced_seismicity import induced_seismic_assessment
+#from runfiles.get_seismic_data import get_NRC_seismic_data
 from runfiles.environmental_reports import environmental_reports
 from runfiles.well_plotter import well_plotter, get_well_coordinates
 from runfiles.OPGEE_input_sensitivity import OPGEE_input_sensitivity
@@ -34,7 +34,7 @@ from runfiles.all_province_facility_summary import all_province_facility_summary
 from runfiles.OPGEE_drilling_and_development import OPGEE_drilling_and_development
 from runfiles.get_DST_data import get_DST_data
 from runfiles.DST_analysis import DST_analysis
-from runfiles.shapefile_reader import formation_shapefile_plotter, plot_infrastructure
+#from runfiles.shapefile_reader import formation_shapefile_plotter, plot_infrastructure
 from runfiles.get_injection_data import get_injection_data
 from runfiles.injection_analysis import injection_analysis, injection_dates
 from runfiles.get_all_post_2005_well_data import get_tight_oil_wells
@@ -208,7 +208,7 @@ if ask_facility_data.upper() == 'Y':
 	OPGEE_data = all_province_facility_summary(well_data, well_data_headings, province_facility_total, connected_project_wells, connected_facilities, OPGEE_data, dates_array)
 
 #------------------------Induced Seismicity----------------
-
+'''
 ask_seismic = str(raw_input('Do Seismic Analysis (Y/N)?   '))
 print('\n')
 
@@ -225,7 +225,7 @@ ask_enviro_reprts = str(raw_input('See Associated Environmental Reports (Y/N)?  
 if ask_enviro_reprts.upper() == 'Y':
 
 	selected_env_reports = environmental_reports(well_data_headings, well_data)
-
+'''
 #---------OPGEE DRILLING AND DEVELOPMENT--------
 
 OPGEE_data = OPGEE_drilling_and_development(OPGEE_data, well_data, well_data_headings)

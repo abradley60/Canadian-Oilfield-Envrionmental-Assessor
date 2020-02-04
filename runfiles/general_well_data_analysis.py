@@ -409,8 +409,8 @@ def OPGEE_well_data(well_data, well_data_headings, OPGEE_data):
 
 
 if __name__ == '__main__':
-	
-	from get_well_data import get_formation_well_data
+
+
 	from well_search import well_search
 	from OPGEE_defaults import OPGEE_defaults
 
