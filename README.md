@@ -3,9 +3,9 @@ Repository for the Canadian Oilfield Environmental Assessor (COEA) tool
   
 The COEA tool relies on several datasets describing several activities of the upstream Canadian O&G industry. For access to this data, please contact the author - alexbradley60@gmail.com
 
-# Requirements
-Python version: Python 2.7  
-**Dependant packages**
+# Requirements  
+**Python version: Python 2.7**  
+**Dependant packages**  
 Numpy  
 matplotlib  
 CSV 
