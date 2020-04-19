@@ -17,7 +17,7 @@ pandas
 
 # Instructions
 **1) Python installation**   
-The COEA is best using the command prompt (Windows) or terminal (Mac) on your local machine. See [tips on using the command prompt (windows)](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands) and [tips on using the terminal (mac OS)[https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855]. 
+The COEA is best using the command prompt (Windows) or terminal (Mac) on your local machine. See [tips on using the command prompt (windows)](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands) and [tips on using the terminal (mac OS)](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855).   
 Python v2.7 is required and should be installed as follows - [python installation guide](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation). 
 Following a successful implementation, you should be able to call python from your command prompt/terminal and see the following. You can exit the python shell by typing quit(). Ensure you have exited before progressing to the next instruction.
 
