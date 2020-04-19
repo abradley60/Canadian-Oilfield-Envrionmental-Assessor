@@ -29,4 +29,10 @@ For the COEA to work, a number of dependant python packages must be installed. T
 **3) Install git and copy this repository to your local machine**  
 To run the code in the repository, you must download it to your local machine. The is most efficiently done through git ([What is git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)), as you can continue to update your code if any changes are made.
 
+**4) Create branch?**  
+
+**5) Edit map_to_drive.py**  
+
+**6) Run the COEA model**  
+
 
