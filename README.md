@@ -25,7 +25,7 @@ Following a successful implementation, you should be able to call python from yo
 
 
 **2) Installing dependant packages**  
-For the COEA to work, a number of dependant python packages must be installed. This can be achived using the python installation package (PIP) command in the terminal or command prompt. For example, to install the openpyxl package type "pip install openpyxl". Repeat the same command for the remaining packages listed above.
+For the COEA to work, a number of dependant python packages must be installed. This can be achived using the python installation package (pip) command in the terminal or command prompt. For example, to install the openpyxl package type "pip install openpyxl". Repeat the same command for the remaining packages listed above.
 
 **3) Install git and copy this repository to your local machine**  
 To run the code in the repository, you must download it to your local machine. The is most efficiently done through git. Intstall git on your machine using the following link - https://git-scm.com/downloads
