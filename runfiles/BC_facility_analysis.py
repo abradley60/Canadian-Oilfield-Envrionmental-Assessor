@@ -32,11 +32,11 @@ def get_BC_facility_links():
 			if switch == 1:
 				#we will index the dictionary with well WA numbers
 				if row[FROMWANUM_index] != 'NULL':
-					#if row[fac_subtype] == 'B': #excludein include certain facility types 
-					if row[FROMWANUM_index] not in BC_facility_links:
-						BC_facility_links[row[FROMWANUM_index]] = [row]
-					else:
-						BC_facility_links[row[FROMWANUM_index]].append(row)
+					if row[fac_subtype] == 'GP': #excludein include certain facility types 
+						if row[FROMWANUM_index] not in BC_facility_links:
+							BC_facility_links[row[FROMWANUM_index]] = [row]
+						else:
+							BC_facility_links[row[FROMWANUM_index]].append(row)
 
 			if row[0] == 'FACILITYID':
 				BC_facility_links_headers = row
@@ -768,17 +768,17 @@ if __name__ == '__main__':
 	import time
 
 	#well_data_function = get_formation_well_data() # MONTNEY
-	#well_data_function = well_search()
+	well_data_function = well_search()
 	#well_data_function = LNG_well_search()
 	#well_data_function = get_all_post_2005_well_data()
-	well_data_function = get_tight_oil_wells()
+	#well_data_function = get_tight_oil_wells()
 
 
 	well_data_headings = well_data_function[0] 
 	well_data = well_data_function[1] 
-	well_data = []
+	#well_data = []
 
-	date_array = dates_array('2014-01','2014-12')
+	date_array = dates_array('2017-01','2017-12')
 	field_name = 'poop'
 
 	#date_array = ['2016-01']

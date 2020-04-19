@@ -1,3 +1,4 @@
+#import dependant python packages
 import time
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,6 +10,8 @@ import collections
 import pylab
 import datetime
 import re
+
+#import runfiles I have written
 from runfiles.get_AB_water_data import get_AB_water_source_data, AB_water_source_plotter
 from runfiles.get_BC_water_data import get_BC_water_data
 from runfiles.general_well_data_analysis import general_well_data_analysis, OPGEE_well_data
@@ -55,7 +58,6 @@ print('\n\nData is Loading Please Wait...\n\n')
 #well_data is stored in a dictionary {'Well UWI' : [well data]} - to know what is stored in the well_data file, print well_data_headings 
 well_data_headings, well_data, field_name = well_search() 
 #well_data_headings, well_data = get_all_post_2005_well_data()
-#field_name = "all"
 #well_data_headings, well_data, field_name = get_tight_oil_wells()
 print('\n\n====================  Data available For Wells  ====================\n')
 print(well_data_headings)
@@ -69,8 +71,9 @@ OPGEE_data = OPGEE_well_data(well_data, well_data_headings, OPGEE_data)
 
 #----------------Plot Wells---------------------#
 
-well_plotter(well_data, well_data_headings) #edit within file if basemap (map of Canada) or shapefiles wanted 
-plt.clf()
+#plotter is not available because of basemap issuess
+#well_plotter(well_data, well_data_headings) #edit within file if basemap (map of Canada) or shapefiles wanted 
+#plt.clf()
 
 
 #-------Post 2005 Production Data--------#
@@ -164,7 +167,6 @@ print('\n')
 
 
 if ask_water_data.upper() == 'Y':
-
 	#--------------------------AB water Analysis---------------------------------------
 
 	AB_water_source_analysis(well_data_headings, well_data)
@@ -220,7 +222,6 @@ if ask_seismic.upper() == 'Y':
 
 	print('\n\n')
 		
-
 
 ask_enviro_reprts = str(raw_input('See Associated Environmental Reports (Y/N)?   '))
 

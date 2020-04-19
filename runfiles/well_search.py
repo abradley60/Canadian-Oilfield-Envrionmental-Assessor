@@ -110,7 +110,7 @@ def well_search():
 	max_GOR= float(raw_input('Enter a Maximum First 12 month Ave GOR (m3/m3):  '))
 
 	if len(str(max_GOR)) == 0:
-		max_GOR = 10000000000000000000
+		max_GOR = 100000000000
 
 	if len(str(min_GOR)) == 0:
 		min_GOR = 0
@@ -145,7 +145,14 @@ def well_search():
 				field_name = row[well_data_headings.index('Producing Field/Area Name')]
 				most_recent_GOR = row[well_data_headings.index('Most Recent 12 mo. Ave GOR (m3/m3)')]
 				first_12_gas = row[well_data_headings.index('First 12 mo. Total GAS (e3m3)')]
-				#formation = company # this will search the companies entered as fomrations
+				#formation = field_name # this will search the companies entered as fomrations
+
+				'''
+				#select from list
+				if wellid in ['100013403924W400','102113603924W400','102060104024W400','103160204024W400','100010304024W400']:
+					wells_list.append(wellid)
+					well_data[wellid] = row
+				'''
 
 				try:
 					GOR = float(row[well_data_headings.index('First 12 mo. Ave GOR (m3/m3)')])
@@ -162,18 +169,18 @@ def well_search():
 				date_format = '%m/%d/%Y'
 				if len(date) > 1:
 					if (date_min < datetime.strptime(date, date_format) < date_max) and \
-	   				  (horizontal in horizontal_TF) and \
-	   				  (min_GOR <= GOR <= max_GOR) and \
-	   				  (province in provinces):
-	   				  for wanted_formation in formations:
-	   				  	if wanted_formation in formation:
-							if wellid not in wells_list:
-								wells_list.append(wellid)
-								well_data[wellid] = row
-								#temporary_dict[formation] += 1
-								temporary_dict[field_name] +=1
-								#print(wellid)
-
+						(horizontal in horizontal_TF) and \
+						(min_GOR <= GOR <= max_GOR) and \
+						(province in provinces):
+						for wanted_formation in formations:
+							if wanted_formation in formation:
+								if wellid not in wells_list:
+									wells_list.append(wellid)
+									well_data[wellid] = row
+									#temporary_dict[formation] += 1
+									temporary_dict[field_name] +=1
+									#print(wellid)
+									#print(len(wells_list))
 
 
 
@@ -185,8 +192,8 @@ def well_search():
 
 	time.sleep(5)
 
-	#for key in temporary_dict:
-	#	print(key, temporary_dict[key])
+	for key in temporary_dict:
+		print(key, temporary_dict[key])
 
 	return well_data_headings, well_data, project_name 
 

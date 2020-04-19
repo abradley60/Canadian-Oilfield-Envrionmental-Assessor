@@ -6,7 +6,6 @@ def map_to_drive():
 	#For example, C:/Users/alexander.bradley/Desktop/Project Data
 	#In this example, the my_path variable below should be set to "C:/Users/alexander.bradley/Desktop/"
 
-	my_path = "C:/Users/alexander.bradley/Desktop/"
-	my_path = "D:/Project Data 2020/"
+	my_path = "/Volumes/UOFC_DATA/Project Data 2020/"
 
 	return my_path

@@ -118,6 +118,7 @@ def AB_formation_facility_list(from_to_facility, well_data, facility_to_well, co
 		print('\nGetting facility list for selected wells')
 
 		for well in well_data:
+
 			if well in from_to_facility:
 
 				for facility in from_to_facility[well]:
@@ -155,6 +156,7 @@ def AB_formation_facility_list(from_to_facility, well_data, facility_to_well, co
 		print('Computational Time (s): ' + "%.4f" %(time.time() - timer))
 		
 		formation_facility_list = -1
+		#formation_facility_list = ['ABIF0009895']
 
 	return formation_facility_list, facility_to_well, connected_wells
 
@@ -525,7 +527,7 @@ def facility_summary_print(facility_summary, facility, connected_wells, facility
 	if facility not in geoscout_fac_data:
 		single_fac = 'GeoSCOUT Facility Data Missing'
 
-	activities_of_interest = ['PROD GAS','FLARE GAS','VENT GAS','FUEL GAS','PROD COND','PROD OIL','REC GAS','DISP GAS','PURREC GAS']#,'DISP GAS','REC GAS']
+	activities_of_interest = ['PROD GAS','FLARE GAS','VENT GAS','FUEL GAS','PROD COND','PROD OIL','REC GAS','DISP GAS','PURREC GAS','INJ CO2','INJ WATER']#,'DISP GAS','REC GAS']
 
 	#print out data for all facilities over the assessed period
 	date_volumes = collections.OrderedDict()
@@ -695,13 +697,13 @@ if __name__ == '__main__':
 	#from LNG_well_search import LNG_well_search
 
 	#well_data_function = get_formation_well_data() # MONTNEY
-	#well_data_function = well_search()
-	well_data_function = get_tight_oil_wells()
+	well_data_function = well_search()
+	#well_data_function = get_tight_oil_wells()
 	#well_data_function = LNG_well_search()
 
 	well_data_headings = well_data_function[0] 
 	well_data = well_data_function[1] 
-	well_data = []
+	#well_data = []
 
 	OPGEE_data = OPGEE_defaults()
 
@@ -716,4 +718,4 @@ if __name__ == '__main__':
 	#print(OPGEE_data['assessed field'][OPGEE_data['headings'].index('Flaring-to-oil ratio')])
 	#print(OPGEE_data['defaults'][OPGEE_data['headings'].index('Flaring-to-oil ratio')])
 
-	OPGEE_input_sensitivity(OPGEE_data, well_data)
+	#OPGEE_input_sensitivity(OPGEE_data, well_data)

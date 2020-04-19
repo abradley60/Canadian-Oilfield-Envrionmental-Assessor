@@ -19,35 +19,35 @@ def general_well_data_analysis(header_data, well_data, OPGEE_data, field_name):
 	well_count = 0
 
 	for i in range(0,len(header_data)):
-	 	if header_data[i] == 'CPA Well ID':
-	 		ID_index = i
-	 	if header_data[i] == 'Area':
-	 		area_index = i
-	 	if header_data[i] == 'Date Drlg Completed':
-	 	#if header_data[i] == 'Date Well Spudded':
-	 		date_index = i
-	 	if header_data[i] == 'TVD (m)':
-	 		TVD_index = i
-	 	if header_data[i] == 'Prod./Inject. Frmtn':
-	 		formation_index = i
-	 	if header_data[i] == 'Production-Casing Size (mm)':
-	 		prod_casing_index = i
-	 	if header_data[i] == 'Intermediate-Casing Size (mm)':
-	 		int_casing_index = i
-	 	if header_data[i] == 'Liner-Casing Size (mm)':
-	 		liner_casing_index = i
-	 	if header_data[i] == 'BH Temp. (degC)':
-	 		temp_index = i
-	 	if header_data[i] == 'First Prod YYYY/MM':
-	 		start_prod_index = i
-	 	if header_data[i] == 'Last Prod. YYYY/MM':
-	 		last_prod_index = i
-	 	if header_data[i] == 'BotHole N/S Distance (m)':
-	 		BH_NS_dist_index = i
-	 	if header_data[i] == 'BotHole E/W Distance (m)':
-	 		BH_EW_dist_index = i
-	 	if header_data[i] == 'Horizontal Hole (T/F)':
-	 		Horizontal_TF_index = i
+		if header_data[i] == 'CPA Well ID':
+			ID_index = i
+		if header_data[i] == 'Area':
+			area_index = i
+		if header_data[i] == 'Date Drlg Completed':
+		#if header_data[i] == 'Date Well Spudded':
+			date_index = i
+		if header_data[i] == 'TVD (m)':
+			TVD_index = i
+		if header_data[i] == 'Prod./Inject. Frmtn':
+			formation_index = i
+		if header_data[i] == 'Production-Casing Size (mm)':
+			prod_casing_index = i
+		if header_data[i] == 'Intermediate-Casing Size (mm)':
+			int_casing_index = i
+		if header_data[i] == 'Liner-Casing Size (mm)':
+			liner_casing_index = i
+		if header_data[i] == 'BH Temp. (degC)':
+			temp_index = i
+		if header_data[i] == 'First Prod YYYY/MM':
+			start_prod_index = i
+		if header_data[i] == 'Last Prod. YYYY/MM':
+			last_prod_index = i
+		if header_data[i] == 'BotHole N/S Distance (m)':
+			BH_NS_dist_index = i
+		if header_data[i] == 'BotHole E/W Distance (m)':
+			BH_EW_dist_index = i
+		if header_data[i] == 'Horizontal Hole (T/F)':
+			Horizontal_TF_index = i
 		if header_data[i] == 'Well Status Text':
 			well_status_index = i
 		if header_data[i] == 'First 12 mo. Ave GOR (m3/m3)':
@@ -73,26 +73,26 @@ def general_well_data_analysis(header_data, well_data, OPGEE_data, field_name):
 	count = 0
 
 	for well in well_data:
-	 	
-	 	#province count
-	 	province = well_data[well][area_index]
-	 	province_counter[province] += 1
+		
+		#province count
+		province = well_data[well][area_index]
+		province_counter[province] += 1
 
-	 	#producing formation count
-	 	formation = well_data[well][formation_index]
-	 	formation_counter[formation] += 1
+		#producing formation count
+		formation = well_data[well][formation_index]
+		formation_counter[formation] += 1
 
-	 	#year count
-	 	try:
-	 		year = int(well_data[well][date_index][-4:])
-	 	except:
-	 		year = int(well_data[well][date_index][0:4])
-	 	
-	 	drill_year_counter[year] += 1
+		#year count
+		try:
+			year = int(well_data[well][date_index][-4:])
+		except:
+			year = int(well_data[well][date_index][0:4])
+		
+		drill_year_counter[year] += 1
 
 		#Well type and count - eg Pump Gas
 		well_type = well_data[well][well_status_index]
-	 	well_type_counter[well_type] += 1
+		well_type_counter[well_type] += 1
 
 		#well zonation count
 		zone_criteria = ['GOR = 0 or > 17800 ', '1780 < GOR =< 17800','267 < GOR =< 1780', 'GOR =< 267']

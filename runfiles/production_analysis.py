@@ -455,15 +455,16 @@ if __name__ == '__main__':
 	from well_search import well_search
 	from general_well_data_analysis import OPGEE_well_data, general_well_data_analysis
 	from OPGEE_input_sensitivity import OPGEE_input_sensitivity
-	from get_all_post_2005_well_data import get_tight_oil_wells
+	from get_all_post_2005_well_data import get_tight_oil_wells, get_all_post_2005_well_data
 
 	#from LNG_well_search import LNG_well_search
 
 	print('Importing General Well Data') #MONTN1EY
 	#well_data_function = get_formation_well_data() # MONTNEY
-	well_data_function = get_tight_oil_wells()
+	#well_data_function = get_tight_oil_wells()
 	#well_data_function = LNG_well_search()
 	#well_data_function = well_search()
+	well_data_function = get_all_post_2005_well_data()
 
 	general_well_data_headings = well_data_function[0] # MONTNEY
 	general_well_data = well_data_function[1] # MONTNEY

@@ -42,9 +42,13 @@ def get_all_post_2005_well_data():
 				#print year
 				wellid = row[well_data_headings.index('CPA Well ID')]
 				if wellid not in well_data:
-					#if year == '2017':
-					wells_list.append(wellid)
-					well_data[wellid] = row
+					try:
+						if float(row[well_data_headings.index("Last 12 mo. Total GAS (e3m3)")]) > 200:
+							#if year == '2017':
+							wells_list.append(wellid)
+							well_data[wellid] = row
+					except:
+						continue
 
 				
 
