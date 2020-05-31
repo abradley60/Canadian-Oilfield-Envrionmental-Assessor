@@ -165,7 +165,7 @@ def well_search():
 				#(field_name in ['NORTHERN MONTNEY']) and \
 				#(field_name in ['HERITAGE']) and \
 				#(field_name in ['WASKAHIGAN']) and \
-				date_format = '%Y/%m/%d'
+				#date_format = '%Y/%m/%d'
 				date_format = '%m/%d/%Y'
 				if len(date) > 1:
 					if (date_min < datetime.strptime(date, date_format) < date_max) and \

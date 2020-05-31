@@ -250,6 +250,7 @@ def well_production_analysis(production_data, production_data_headings, well_dat
 
 	from well_plotter import  plot_color_label_for_tight_oil
 
+	csv_dict = {}
 
 	#assess first year production from formation by year
 	
@@ -340,6 +341,7 @@ def well_production_analysis(production_data, production_data_headings, well_dat
 				
 				plt.plot(range(0,months_assessed),catagory_data, label = label)
 				print(label + ';' + str(np.around(catagory_data,decimals=1)))
+
 		
 		if selected_index == study_formation_index:
 			plot_title = 'Formation'
@@ -463,8 +465,8 @@ if __name__ == '__main__':
 	#well_data_function = get_formation_well_data() # MONTNEY
 	#well_data_function = get_tight_oil_wells()
 	#well_data_function = LNG_well_search()
-	#well_data_function = well_search()
-	well_data_function = get_all_post_2005_well_data()
+	well_data_function = well_search()
+	#well_data_function = get_all_post_2005_well_data()
 
 	general_well_data_headings = well_data_function[0] # MONTNEY
 	general_well_data = well_data_function[1] # MONTNEY

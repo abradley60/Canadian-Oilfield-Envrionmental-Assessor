@@ -23,8 +23,8 @@ def general_well_data_analysis(header_data, well_data, OPGEE_data, field_name):
 			ID_index = i
 		if header_data[i] == 'Area':
 			area_index = i
-		if header_data[i] == 'Date Drlg Completed':
-		#if header_data[i] == 'Date Well Spudded':
+		#if header_data[i] == 'Date Drlg Completed':
+		if header_data[i] == 'Date Well Spudded':
 			date_index = i
 		if header_data[i] == 'TVD (m)':
 			TVD_index = i
@@ -85,7 +85,9 @@ def general_well_data_analysis(header_data, well_data, OPGEE_data, field_name):
 		#year count
 		try:
 			year = int(well_data[well][date_index][-4:])
+			#print(well_data[well][date_index], well)
 		except:
+			#print(well_data[well][date_index], well)
 			year = int(well_data[well][date_index][0:4])
 		
 		drill_year_counter[year] += 1
