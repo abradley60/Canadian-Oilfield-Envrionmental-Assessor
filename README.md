@@ -13,3 +13,6 @@ The COEA requires python 2.7. The environment is best setup using a package mana
 1. Install conda miniforge on local machine (https://github.com/conda-forge/miniforge). Existing conda install should also work. 
 2. Create the enviornment ```conda env create -f environment.yml```
 3. Run the script ```python Canadian_Oilfield_Environmental_Assessor.py```
+
+# Contact
+Reach out to alexbradley60@gmail.com
